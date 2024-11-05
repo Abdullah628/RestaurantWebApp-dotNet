@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantWebApp.Data;
 
@@ -11,9 +12,11 @@ using RestaurantWebApp.Data;
 namespace RestaurantWebApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105054126_AddedImageUrl")]
+    partial class AddedImageUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -409,7 +412,7 @@ namespace RestaurantWebApp.Data.Migrations
                             ProductId = 1,
                             CategoryId = 2,
                             Description = "A delicious beef taco",
-                            ImageUrl = "https://ibb.co.com/3h59spw",
+                            ImageUrl = "https://via.placeholder.com/150",
                             Name = "Beef Taco",
                             Price = 2.50m,
                             Stock = 100
@@ -419,7 +422,7 @@ namespace RestaurantWebApp.Data.Migrations
                             ProductId = 2,
                             CategoryId = 2,
                             Description = "A delicious chicken taco",
-                            ImageUrl = "https://ibb.co.com/3h59spw",
+                            ImageUrl = "https://via.placeholder.com/150",
                             Name = "Chicken Taco",
                             Price = 1.99m,
                             Stock = 101
@@ -429,7 +432,7 @@ namespace RestaurantWebApp.Data.Migrations
                             ProductId = 3,
                             CategoryId = 2,
                             Description = "A delicious fish taco",
-                            ImageUrl = "https://ibb.co.com/3h59spw",
+                            ImageUrl = "https://via.placeholder.com/150",
                             Name = "Fish Taco",
                             Price = 3.99m,
                             Stock = 90
